@@ -62,6 +62,12 @@ mv data.txt Data_backup.csv
 mv * ../newproject
 ```
 
+* `cp` (copy a file)
+
+```
+cp file newname
+```
+
 * `rm` (remove file)
 
 ```
@@ -90,6 +96,14 @@ which which
 
 ```
 find . -name pattern
+```
+
+* `rename` (rename large numbers of files using a pattern)
+
+Using the following command, da34242.csv would become Data34242.csv, etc.
+
+```
+rename da Data *.csv
 ```
 
 Wildcards

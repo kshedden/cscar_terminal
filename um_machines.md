@@ -86,3 +86,9 @@ Current processes:
 ```
 top
 ```
+
+Current users:
+
+```
+w
+```

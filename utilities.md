@@ -3,7 +3,8 @@ UNIX utilities
 
 A large number of utility programs are installed on most UNIX systems.
 Many of them are installed under /usr/bin.  We will discuss just a few
-of them here.
+of them here.  A longer list with documentation is
+[here](http://www.tldp.org/LDP/GNU-Linux-Tools-Summary/html/book1.htm).
 
 Data transfer
 -------------
@@ -18,17 +19,17 @@ wget https://en.wikipedia.org/wiki/Wget
 *scp* ("secure copy") transfers files between computers, and handles
  login authentication when needed.  The basic pattern is `scp from
  to`, where *from* and *to* specify some combination of the user, the
- host, and the file name.  In the example below, I am copying a file
- named *filename* from my account on the machine login.itd.umich.edu
- to the current working directory.  I will be prompted to authenticate
- on the remote machine after isuing this command.
+ host, and the file name.  In the example below, I copy a file named
+ *filename* from my account on the machine *login.itd.umich.edu* to
+ the current working directory.  I will be prompted to authenticate on
+ the remote machine after issuing this command.
 
 ```
 scp kshedden@login.itd.umich.edu:filename .
 ```
 
 Here is an *scp* command that transfers a file from the local machine
-to login.itd.umich.edu:
+to *login.itd.umich.edu*:
 
 ```
 scp filename kshedden@login.itd.umich.edu.
@@ -39,8 +40,7 @@ Working with text files
 
 *cat* ("concatenate") combines the contents of several text files
  sequentially.  By default the results go to the screen ("standard
- output"), but typically will be redirected to a file:
-
+ output"), but typically this will be redirected to a file:
 
 ```
 cat file1 file2 > result
@@ -73,6 +73,10 @@ sort -k3,3 -t ',' file
 *paste* combines multiple input files horizontally (as opposed to
  `cat` which combines files vertically).  Basic usage is `paste file1
  file2 > output`.
+
+*head* and *tail* extract the first or last 10 lines of a file and
+ write them to standard output (screen).  The number of lines is
+ configurable using the `-n` flag.
 
 Compressing and archiving files
 -------------------------------
