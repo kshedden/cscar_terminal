@@ -3,24 +3,28 @@ Working with the filesystem
 
 Two major UNIX principles:
 
-* "Everything is a file" -- a file can be a program, data, a device;
-  "data" files can have any format and the file name does not need to
-  convey the format; no metadata conveying how to interpret file
-  contents; no locks (in general)
+* "Everything is a file" -- a file can be a program, data, a device
+  (e.g. printer or thumb drive); "data" files can have any format and
+  the file name does not need to convey the format; there is no
+  metadata conveying how to interpret file contents; no locks (in
+  general)
 
 * The filesystem hides the implementation and hardware configuration;
   what we see as the filesystem on one machine may be physically
-  stored on multiple disks of different types and on other computers
-  accessible via the network
+  stored on multiple local disks or other storage devices or on other
+  computers accessible via the network
 
 
 Basic filesystem commands
 -------------------------
 
-The general format of most commands is [command name] [arguments] [flags].
+The general format of most UNIX commands is: `[command name]
+[arguments] [flags]`.
 
-You cam usually obtain documentation for command `cmd` using `cmd
+You can usually obtain documentation for command `cmd` using `cmd
 --help` or `man cmd`.
+
+Here are some essential commands, along with common use-cases for each one:
 
 * `pwd` (print working directory)
 
@@ -32,9 +36,10 @@ pwd
 
 ```
 ls -a     # don't hide "dot files"
-ls -la    # more details
-ls -lat   # sort by time
-ls -lah   # file sizes in "human readable" form
+ls -l     # more details
+ls -t     # sort by time
+ls -h     # file sizes in "human readable" form
+ls -laht  # combine multiple flags
 ls prog*  # wildcard (more below)
 ```
 
@@ -46,6 +51,9 @@ cd ..
 cd ../../../
 cd /
 ```
+
+`.` always refers to the current directory and `..` refers to the
+parent of the current directory
 
 * `mv` (move a file)
 
@@ -62,8 +70,8 @@ rm *.txt     # remove all files with txt suffix
 rm -rf .     # dangerous!
 ```
 
-UM currently shapshots your home directly roughly every 24 hours and
-places the snapshot in `.oldfiles`.
+The UM AFS system shapshots your home directly roughly every 24 hours
+and places the snapshot in `.oldfiles`.
 
 * rmdir (remove directory)
 
@@ -111,7 +119,7 @@ AFS commands
 * Your AFS home directory is located at `/afs/umich.edu/user/...`
 
 * `kinit -l25h` (need to run this followed by `aklog` roughly once a
-  day if you maintain an open terminal)
+  day if you maintain a connection)
 
 * `fs lq`
 
@@ -128,7 +136,8 @@ Lots of details not covered here.
 Executable files
 ----------------
 
-Call it a "command" or a "program" but it is really "just a file"
+May be called a "command" or a "program" but it is really "just a
+file".
 
 You can try to execute a file by typing the file name at the shell
 prompt.  First the `PATH` is searched for a file with the given name.
@@ -140,4 +149,4 @@ To execute a file in the current directory use `.\filename`.
 Executable files are either native compiled files (binary files), or
 text files that are scripts to be executed by an interpreter (first
 line must start with a
-[shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) `#!/`
+[shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) `#!/`)

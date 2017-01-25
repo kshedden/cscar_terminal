@@ -1,13 +1,13 @@
 Connecting to UM Linux hosts
 ============================
 
-Here are the main U-M Linux serves that are (relatively) open for
+Here are the main U-M Linux servers that are (relatively) open for
 login access:
 
 ```
-login.itd.umich.edu
+login.itd.umich.edu (a pool of several machines)
 
-scs.itd.umich.edu (forward to mario/luigi)
+scs.itd.umich.edu (a pool of two machines named mario and luigi)
 
 mario.dsc.umich.edu
 
@@ -17,7 +17,7 @@ flux-login.arc-ts.umich.edu (requires two-factor authentication)
 ```
 
 If you do not have an AFS/IFS allocation you will not be able to
-connect to these machines.  You can get an allocation from the
+connect to these machines.  You can request an allocation at the
 following page:
 
 https://ifsprovisioning.its.umich.edu/ifs_storage/request
@@ -30,21 +30,21 @@ the machines named above using
 [SSH](https://en.wikipedia.org/wiki/Secure_Shell).  The way you do
 this depends on the machine you are using:
 
-* *On MacOS*: Launch the "Terminal" application which should be
-  located under Applications/Utilities, or use Spotlight and search
-  for "Terminal".
+* *MacOS*: Launch the "Terminal" application which should be located
+  under Applications/Utilities, or use Spotlight and search for
+  "Terminal".
 
-* *On a Linux laptop/desktop*: depends on the distribution, but
-   "ctrl-alt-t" wil work on many systems, or find "terminal" or
-   "shell" in one of the menus.
+* *Linux*: depends on the distribution, but "ctrl-alt-t" wil work on
+   many systems, or look for "terminal", "shell", or "console" in one
+   of the menus.
 
-* *On a Windows machine*: Use a SSH client.  There are several, but
-   Putty [www.chiark.greenend.org.uk/~sgtatham/putty/download.html] is
-   free and well-maintained.  You will need to use the menus to set up
-   the session.
+* *Windows*: Use a SSH client.  There are several, but Putty
+   [www.chiark.greenend.org.uk/~sgtatham/putty/download.html] is free
+   and well-maintained.  You will need to use the menus to set up the
+   session.
 
-For Max/Linux once the terminal is open you should be able to connect
-using the ssh command, e.g.
+For Mac/Linux once the terminal is open you should be able to connect
+to a remote linux host using the ssh command, e.g.
 
 ```
 ssh mario.dsc.umich.edu
@@ -58,7 +58,7 @@ ssh kshedden@mario.dsc.umich.edu
 ```
 
 The first time you connect to a machine, you will be asked to accept
-and store the machine's host key.
+and store the machine's host key on your local machine.
 
 Learning about the machine you have connected to
 ================================================

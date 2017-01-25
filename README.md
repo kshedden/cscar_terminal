@@ -1,15 +1,17 @@
-Linux terminal workshop
-=======================
+Linux command line workshop
+===========================
 
-Workshop contents:
+__Workshop contents:__
 
 [Background, history, terminology](background.md)
 
 [Connecting to UM machines](um_machines.md)
 
-[Working with files](filesystem.md)
+[Working with the filesystem](filesystem.md)
 
 [Working with processes](processes.md)
+
+[Working with the shell](shell.md)
 
 [Terminal multiplexers](multiplexers.md)
 
