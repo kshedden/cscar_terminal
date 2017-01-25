@@ -48,7 +48,8 @@ Pipes
 -----
 
 Pipes are used to treat the output of one command as the input to
-another.  For now we will give one simple example:
+another.  For now we will give one simple example, and we will see
+more complex examples when we discuss using OS tools:
 
 ```
 ls -laht | less

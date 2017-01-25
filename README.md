@@ -17,4 +17,4 @@ __Workshop contents:__
 
 [Editors](editors.md)
 
-[Utilities for manipulating data](data_utils.md)
+[Utilities for manipulating data](utilities.md)
