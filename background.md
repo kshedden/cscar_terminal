@@ -6,20 +6,26 @@ Brief history
 
 1970's: [UNIX](https://en.wikipedia.org/wiki/Unix) is an operating
 system developed at Bell Labs.  It supports multiple users working on
-a single physical machine via multi-tasking and other means of
-time-sharing.
+a single physical machine via
+[multi-tasking](https://en.wikipedia.org/wiki/Computer_multitasking)
+and other means of time-sharing.
 
-1980's: Many commercial versions of UNIX sponsored by hardware
+1980's: Many commercial versions of UNIX are developed by hardware
 vendors.  [POSIX](https://en.wikipedia.org/wiki/POSIX) was an effort
 to standardize some aspects of the OS.
 
-1990's: Two major open-source UNIX "clones" emerged -- BSD and Linux.
-Apple adopts a UNIX-like foundation for MacOS.
+1990's: Two major open-source UNIX "clones" emerge:
+[BSD](https://en.wikipedia.org/wiki/Berkeley_Software_Distribution)
+and the [Linux kernel](https://en.wikipedia.org/wiki/Linux).  Linux
+combined with the [Gnu](https://en.wikipedia.org/wiki/GNU_Project)
+utilities provides a usable UNIX-like system.  Apple adopts a
+UNIX-like foundation for [MacOS](https://en.wikipedia.org/wiki/MacOS).
 
 By 2010 UNIX variants had become the main OS running the cloud (web
 applications, commercial database systems, social media, etc.)
 
-What's in store for late 2010's and beyond?  Virtual machines,
+What's in store for late 2010's and beyond?  [Virtual
+machines](https://en.wikipedia.org/wiki/Operating-system-level_virtualization),
 container-based architectures, OS support for hardware innovation
 (increasing number of cores, flash memory, ...)
 
@@ -59,7 +65,7 @@ Key UNIX principles
 * "the power of a system comes more from the relationships among
   programs than from the programs themselves" (Rob Pike)
 
-* "style [of using UNIX] based on the use of tools: using programs
-  separately or in combination to get a job done, rather than doing it
-  by hand, by monolithic self-sufficient subsystems, or by
+* The "style [of using UNIX is] based on the use of tools: using
+  programs separately or in combination to get a job done, rather than
+  doing it by hand, by monolithic self-sufficient subsystems, or by
   special-purpose, one-time programs." (Kernighan, Ritchie)

@@ -8,10 +8,10 @@ Two major UNIX principles:
   convey the format; no metadata conveying how to interpret file
   contents; no locks (in general)
 
-* The filesystem hides the implementation and hardware configuration
-  (no C: in UNIX); what we see as the filesystem on one machine may be
-  physically stored on multiple disks of different types and on other
-  computer
+* The filesystem hides the implementation and hardware configuration;
+  what we see as the filesystem on one machine may be physically
+  stored on multiple disks of different types and on other computers
+  accessible via the network
 
 
 Basic filesystem commands
@@ -47,6 +47,13 @@ cd ../../../
 cd /
 ```
 
+* `mv` (move a file)
+
+```
+mv data.txt Data_backup.csv
+mv * ../newproject
+```
+
 * `rm` (remove file)
 
 ```
@@ -77,6 +84,18 @@ which which
 find . -name pattern
 ```
 
+Wildcards
+---------
+
+Most commands expand *wildcards* as follows
+
+* `*` matches anything
+
+* `?` matches a single character
+
+* `[...]` matches a range of characters, e.g. `[ax]*` matches all
+  files beginning with a or b.
+
 
 View file contents
 ------------------
@@ -89,7 +108,36 @@ View file contents
 AFS commands
 ------------
 
-* `kinit -l25h` (need to run this roughly once a day if you maintain an
-  open terminal)
+* Your AFS home directory is located at `/afs/umich.edu/user/...`
+
+* `kinit -l25h` (need to run this followed by `aklog` roughly once a
+  day if you maintain an open terminal)
 
 * `fs lq`
+
+File permissions
+----------------
+
+Files can be readable/writeable/executable (or any combination) by the
+"owner", "group", and "others".
+
+Lots of details not covered here.
+
+`chmod u+x` makes a file executable
+
+Executable files
+----------------
+
+Call it a "command" or a "program" but it is really "just a file"
+
+You can try to execute a file by typing the file name at the shell
+prompt.  First the `PATH` is searched for a file with the given name.
+
+Use `echo $PATH` to see the current PATH value
+
+To execute a file in the current directory use `.\filename`.
+
+Executable files are either native compiled files (binary files), or
+text files that are scripts to be executed by an interpreter (first
+line must start with a
+[shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) `#!/`
