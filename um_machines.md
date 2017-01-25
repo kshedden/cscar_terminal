@@ -7,7 +7,7 @@ login access:
 ```
 login.itd.umich.edu
 
-scs.itd.umich.edu (gateway to mario/luigi)
+scs.itd.umich.edu (forward to mario/luigi)
 
 mario.dsc.umich.edu
 
@@ -16,7 +16,18 @@ luigi.dsc.umich.edu
 flux-login.arc-ts.umich.edu (requires two-factor authentication)
 ```
 
-You should be able to connect to any of these machines using SSH.
+If you do not have an AFS/IFS allocation you will not be able to
+connect to these machines.  You can get an allocation from the
+following page:
+
+[https://ifsprovisioning.its.umich.edu/ifs_storage/request]
+
+(note that the allocation will not be created immediately, you may
+need to wait 1-2 hours for it to become available)
+
+If you have an AFS allocation you should be able to connect to any of
+the machines named above using SSH.  The way you do this depends on
+the machine you are using:
 
 * *On MacOS*: Launch the "Terminal" application which should be
   located under Applications/Utilities, or use Spotlight and search
