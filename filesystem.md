@@ -82,7 +82,7 @@ and places the snapshot in `.oldfiles`.
 * rmdir (remove directory)
 
 ```
-rmdir projectdata # directory must be empty
+> rmdir projectdata # directory must be empty
 ```
 
 * `which` (find the location of a program)
@@ -135,7 +135,7 @@ AFS commands
 * `kinit -l25h` (need to run this followed by `aklog` roughly once a
   day if you maintain a connection)
 
-* `fs lq`
+* `fs lq` prints your disk quota and usage
 
 File permissions
 ----------------
@@ -147,6 +147,9 @@ Lots of details not covered here.
 
 `chmod u+x` makes a file executable
 
+If using AFS, it has its own system of file permissions that exists
+along-side the UNIX permission system.
+
 Executable files
 ----------------
 
@@ -154,11 +157,9 @@ May be called a *command* or a *program* but it is really "just a
 file".
 
 You can try to execute a file by typing the file name at the shell
-prompt.  First the `PATH` is searched for an executable file with the
-given name.
-
-Use `echo $PATH` to see the current value of the PATH environment
-variable
+prompt.  First the directories in `PATH` are searched for an
+executable file with the given name.  Use `echo $PATH` to see the
+current value of the PATH environment variable
 
 To execute a file in the current directory use `.\filename`.
 

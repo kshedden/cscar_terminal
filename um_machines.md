@@ -47,14 +47,14 @@ For Mac/Linux once the terminal is open you should be able to connect
 to a remote linux host using the ssh command, e.g.
 
 ```
-ssh mario.dsc.umich.edu
+> ssh mario.dsc.umich.edu
 ```
 
 If your username on your local machine does not match your UM
 uniquname, you will need to provide the username, e.g.
 
 ```
-ssh kshedden@mario.dsc.umich.edu
+> ssh kshedden@mario.dsc.umich.edu
 ```
 
 The first time you connect to a machine, you will be asked to accept
@@ -66,29 +66,29 @@ Learning about the machine you have connected to
 General system information:
 
 ```
-uname -a
+> uname -a
 ```
 
 CPU information:
 
 ```
-lscpu
+> lscpu
 ```
 
 Disk information:
 
 ```
-lsblk
+> lsblk
 ```
 
 Current processes:
 
 ```
-top
+> top
 ```
 
 Current users:
 
 ```
-w
+> w
 ```

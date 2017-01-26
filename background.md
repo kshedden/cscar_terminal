@@ -17,10 +17,10 @@ to standardize some aspects of the OS.
 
 1990's: Two major open-source UNIX "clones" emerge:
 [BSD](https://en.wikipedia.org/wiki/Berkeley_Software_Distribution)
-and the [Linux kernel](https://en.wikipedia.org/wiki/Linux).  Linux
-combined with the works of the [GNU
-project](https://en.wikipedia.org/wiki/GNU_Project) provides a usable
-UNIX-like system.  Apple adopts a UNIX-like foundation for
+and the [Linux kernel](https://en.wikipedia.org/wiki/Linux).
+Combining Linux with the tools produced by the [GNU
+project](https://en.wikipedia.org/wiki/GNU_Project) results in a
+usable UNIX-like system.  Apple adopts a UNIX-like foundation for
 [MacOS](https://en.wikipedia.org/wiki/MacOS).
 
 By 2010 UNIX variants became the main OS running the cloud (web
@@ -29,8 +29,9 @@ applications, commercial database systems, social media, etc.)
 What's in store for late 2010's and beyond?  [Virtual
 machines](https://en.wikipedia.org/wiki/Operating-system-level_virtualization),
 container-based architectures, OS support for hardware innovation
-(increasing number of cores, flash memory), ...  UNIX continues to be
-highly adaptable OS framework
+(increasing number of cores, flash memory), ...  Almost 50 years from
+its origins, UNIX continues to be highly adaptable and relevant OS
+framework.
 
 Main components/functionality of an operating system
 -----------------------------------------------------
@@ -70,15 +71,15 @@ Key UNIX principles
 
 [UNIX philosophy](https://en.wikipedia.org/wiki/Unix_philosophy)
 
-* Everything is a file (hide the filesytem implementation)
+* Everything is a file (but hide the filesytem implementation)
 
 * C is the central implementation language
 
 * Each program should do one thing well
 
-* Programs should work together, be composable
+* Programs should work together and be composable
 
-* Text streams are the universal interface
+* Text streams are the universal interface between tools
 
 * "the power of a system comes more from the relationships among
   programs than from the programs themselves" (Rob Pike)
@@ -86,4 +87,4 @@ Key UNIX principles
 * The "style [of using UNIX is] based on the use of tools: using
   programs separately or in combination to get a job done, rather than
   doing it by hand, by monolithic self-sufficient subsystems, or by
-  special-purpose, one-time programs." (Kernighan, Ritchie)
+  special-purpose, one-time programs" (Kernighan, Ritchie)

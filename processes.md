@@ -86,6 +86,6 @@ As noted above, a foreground process can usually be killed with
 `ctrl-c`.  Killing a non-foreground job involves working with the
 process id rather than the job id.  If you have a suspended or running
 process that you want to kill, first use `ps` to get the process id,
-then enter `kill -9 #<enter>` to attempt to kill the process with the
-given id (this usually, but not always, will successfully kill the
-job).
+then enter `kill -9 #<enter>` to attempt to kill the process,
+replacing `#` with the process id.  This usually, but not always, will
+successfully kill the job.
