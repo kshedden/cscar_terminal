@@ -29,7 +29,9 @@ Use `!xyz` to rerun the last command that begins with `xyz`.  Add `:p`
 to the end, e.g. `!xyz:p` to print the command without executing it.
 
 Type the first few characters of a command or local file and then
-"tab" to list all possible matches.
+"tab" to complete the command if the completion is unique.  If the
+completion is not unique, type "tab" twice to list all possible
+matches.
 
 Redirect output to a file
 -------------------------
@@ -42,7 +44,12 @@ lst -lat  > files
 cat *.txt > everything.txt
 ```
 
-If you also want to redirect the "error stream" use `>&` instead of `>`.
+If you also want to redirect the "standard error stream" use `>&`
+instead of `>`, e.g.
+
+```
+python script.py >&output
+```
 
 Pipes
 -----

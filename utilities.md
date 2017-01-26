@@ -77,7 +77,11 @@ using the comma character as a delimiter:
 
 *head* and *tail* extract the first or last 10 lines of a file and
  write them to standard output (screen).  The number of lines is
- configurable using the `-n` flag.
+ configurable using the `-n` flag, e.g.
+
+```
+> head -n50 file.csv
+```
 
 Compressing and archiving files
 -------------------------------
@@ -90,11 +94,12 @@ Windows-compatible `zip`/`unzip`.
 
 Gzip compressed files should have names ending in *.gz*.  Many tools
 such as emacs and less can read compressed files without decompressing
-on-disk.  Some tools such as grep provide an alternate version
-(`zgrep`) for handling compressed inputs.  Many programming languages
-can also read compressed files directly without on-disk decompression.
-In general, once you compress a file using gzip you should not have to
-decompress it ever again.
+on-disk, i.e. if you run `less file.gz` you will see the decompressed
+contents of the file.  Some tools such as grep provide an alternate
+version (`zgrep`) for handling compressed inputs.  Many programming
+languages can also read compressed files directly without on-disk
+decompression.  In general, once you compress a file using gzip you
+should not have to decompress it ever again.
 
 If a command line tool does not support gzip files directly, you can
 use a pipe to decompress the file on-the-fly.  For example, if you

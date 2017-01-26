@@ -38,10 +38,10 @@ this depends on the machine you are using:
    many systems, or look for "terminal", "shell", or "console" in one
    of the menus.
 
-* *Windows*: Use a SSH client.  There are several, but Putty
-   [www.chiark.greenend.org.uk/~sgtatham/putty/download.html] is free
-   and well-maintained.  You will need to use the menus to set up the
-   session.
+* *Windows*: Use a SSH client.  There are several, but
+   [Putty](www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
+   is free and well-maintained.  You will need to use the menus to set
+   up the session.
 
 For Mac/Linux once the terminal is open you should be able to connect
 to a remote linux host using the ssh command, e.g.
