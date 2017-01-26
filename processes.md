@@ -1,12 +1,12 @@
 Working with processes and jobs
 ===============================
 
-A *process* is a program that is currently running on a system.  Most
-UNIX servers support multiple users, so a machine may be running a
-number of proceses launched by various users, and will also be running
-dozens of system processes.  These processes run "simultaneously" and
-share system resources through the multi-tasking capabilities of the
-OS.
+A *process* is a program that is currently running on a computing
+system.  Most UNIX servers support multiple users, so a machine may be
+running a number of proceses launched by various users, and will also
+be running dozens of system processes.  These processes run
+"simultaneously" and share system resources through the multi-tasking
+capabilities of the OS.
 
 Modern computers have multiple cores, so multi-tasking may involve
 running programs on different cores, or having several proceses share
@@ -22,8 +22,8 @@ A *job* is a related but distinct concept from a process.  A job is a
 concept used by the shell, whereas a process is handled by the base
 operating system.  Jobs are groups of one or more processes that are
 handled by the shell as a unit.  Jobs and processes both have numeric
-id's, but they are not the same, and it can be confusing to know when
-a tool requires a process id or a job id.
+id's, but they are not interchangeable, and it can be confusing to
+know when a tool requires a process id or a job id.
 
 Obtaining process and job information
 -------------------------------------
@@ -32,9 +32,9 @@ The main command for obtaining process information from the system is
 `ps`.  Below are some examples of using `ps`:
 
 ```
-ps -e  # list all processes
+> ps -e  # list all processes
 
-ps -u kshedden # list processes for one user
+> ps -u kshedden # list processes for one user
 ```
 
 Another useful tool is `top`, which shows information about the
@@ -43,8 +43,8 @@ current processes in real time.
 The main command for obtaining information about jobs is `jobs`.  We
 will discuss this further below.
 
-Foreground and background execution
------------------------------------
+Foreground and background execution, suspending jobs
+----------------------------------------------------
 
 When we launch a program from the command line, it normally runs in
 the *foreground*. This means that the command line is blocked and we
@@ -53,25 +53,31 @@ you can kill a foreground job using `ctrl-c`.  We will discuss other
 ways to kill jobs below.  Here is a job running in the foreground:
 
 ```
-sleep 5s
+> sleep 5s
 ```
 
-Alternatively, you can launch a program in the background by placing
-an ampersand (&) at the end of the command.  In this case the process
-continues running and you are immediately able to continue using the
-command line.  Here is a job running in the background:
+You can launch a program in the *background* by placing an ampersand
+(&) at the end of the command.  In this case the process continues
+running and you are immediately able to continue using the command
+line.  Here is a job running in the background:
 
 ```
-sleep 5s&
+> sleep 5s&
 ```
 
-If you have a job running in the foreground, you can usually suspend
+If you have a job running in the foreground, you can usually *suspend*
 it using `ctrl-z`.  Suspended jobs are not actively running, but they
 can be restarted from where they left off.  To practice this, type
 `sleep 30s<enter>`, then `ctrl-z`, then `jobs<enter>`.  At this point
 you will see the job number for your sleep process.  You can restart
 it in the background using `bg #<enter>`, and you can restart it in
 the foreground using `fg #<enter>`.
+
+Background jobs will generally terminate once you log out of the
+shell.  To keep a background job running after you exit the shell, use
+a terminal multiplexer like
+[screen](https://en.wikipedia.org/wiki/GNU_Screen) or
+[tmux](https://en.wikipedia.org/wiki/Tmux).
 
 Killing processes
 -----------------
@@ -83,9 +89,3 @@ process that you want to kill, first use `ps` to get the process id,
 then enter `kill -9 #<enter>` to attempt to kill the process with the
 given id (this usually, but not always, will successfully kill the
 job).
-
-Background jobs will generally terminate once you log out of the
-shell.  To keep a background job running after you exit the shell, use
-a terminal multiplexer like
-[screen](https://en.wikipedia.org/wiki/GNU_Screen) or
-[tmux](https://en.wikipedia.org/wiki/Tmux).

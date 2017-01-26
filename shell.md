@@ -3,7 +3,7 @@ Working with the shell
 
 The [shell](https://en.wikipedia.org/wiki/Unix_shell) is the main user
 interface layer for the UNIX command line.  There are several shells
-available, but the
+available, but
 [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) is probably
 the most common.
 

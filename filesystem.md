@@ -6,12 +6,12 @@ Two major UNIX principles:
 * "Everything is a file" -- a file can be a program, data, a device
   (e.g. printer or thumb drive); "data" files can have any format and
   the file name does not need to convey the format; there is no
-  metadata conveying how to interpret file contents; no locks (in
-  general)
+  metadata conveying how to interpret file contents; there are no
+  locks (in general)
 
-* The filesystem hides the implementation and hardware configuration;
+* The filesystem hides its implementation and hardware configuration;
   what we see as the filesystem on one machine may be physically
-  stored on multiple local disks or other storage devices or on other
+  stored on multiple local disks or other storage devices, or on other
   computers accessible via the network
 
 
@@ -29,27 +29,27 @@ Here are some essential commands, along with common use-cases for each one:
 * `pwd` (print working directory)
 
 ```
-pwd
+> pwd
 ```
 
 * `ls` (list contents of current directory)
 
 ```
-ls -a     # don't hide "dot files"
-ls -l     # more details
-ls -t     # sort by time
-ls -h     # file sizes in "human readable" form
-ls -laht  # combine multiple flags
-ls prog*  # wildcard (more below)
+> ls -a     # don't hide "dot files"
+> ls -l     # more details
+> ls -t     # sort by time
+> ls -h     # file sizes in "human readable" form
+> ls -laht  # combine multiple flags
+> ls prog*  # wildcard (more below)
 ```
 
 * `cd` (change directory)
 
 ```
-cd
-cd ..
-cd ../../../
-cd /
+> cd
+> cd ..
+> cd ../../../
+> cd /
 ```
 
 `.` always refers to the current directory and `..` refers to the
@@ -58,22 +58,22 @@ parent of the current directory
 * `mv` (move a file)
 
 ```
-mv data.txt Data_backup.csv
-mv * ../newproject
+> mv data.txt Data_backup.csv
+> mv * ../newproject
 ```
 
 * `cp` (copy a file)
 
 ```
-cp file newname
+> cp file newname
 ```
 
 * `rm` (remove file)
 
 ```
-rm filename  # remove a named file
-rm *.txt     # remove all files with txt suffix
-rm -rf .     # dangerous!
+> rm filename  # remove a named file
+> rm *.txt     # remove all files with txt suffix
+> rm -rf .     # dangerous!
 ```
 
 The UM AFS system shapshots your home directly roughly every 24 hours
@@ -88,14 +88,14 @@ rmdir projectdata # directory must be empty
 * `which` (find the location of a program)
 
 ```
-which ls
-which which
+> which ls
+> which which
 ```
 
 * `find` (finds files based on name)
 
 ```
-find . -name pattern
+> find . -name pattern
 ```
 
 * `rename` (rename large numbers of files using a pattern)
@@ -103,7 +103,7 @@ find . -name pattern
 Using the following command, da34242.csv would become Data34242.csv, etc.
 
 ```
-rename da Data *.csv
+> rename da Data *.csv
 ```
 
 Wildcards
@@ -150,17 +150,20 @@ Lots of details not covered here.
 Executable files
 ----------------
 
-May be called a "command" or a "program" but it is really "just a
+May be called a *command* or a *program* but it is really "just a
 file".
 
 You can try to execute a file by typing the file name at the shell
-prompt.  First the `PATH` is searched for a file with the given name.
+prompt.  First the `PATH` is searched for an executable file with the
+given name.
 
-Use `echo $PATH` to see the current PATH value
+Use `echo $PATH` to see the current value of the PATH environment
+variable
 
 To execute a file in the current directory use `.\filename`.
 
 Executable files are either native compiled files (binary files), or
-text files that are scripts to be executed by an interpreter (first
-line must start with a
-[shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) `#!/`)
+text files that are scripts to be executed by an interpreter.  In the
+case of a script, the first line must start with a
+[shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) `#!/`) that
+tells the shell what interpreter to use when executing the file.
