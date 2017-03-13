@@ -38,8 +38,9 @@ Here are some essential commands, along with common use-cases for each one:
 > ls -a     # don't hide "dot files"
 > ls -l     # more details
 > ls -t     # sort by time
-> ls -h     # file sizes in "human readable" form
-> ls -laht  # combine multiple flags
+> ls -lt    # with details, sorted by time (newest first)
+> ls -ltr   # with details, sorted by reversed time (oldest first)
+> ls -h     # print file sizes in "human readable" form
 > ls prog*  # wildcard (more below)
 ```
 
@@ -161,7 +162,8 @@ prompt.  First the directories in `PATH` are searched for an
 executable file with the given name.  Use `echo $PATH` to see the
 current value of the PATH environment variable
 
-To execute a file in the current directory use `.\filename`.
+To execute a file in the current directory use `./filename`, which
+works regardless of whether the file is in your PATH.
 
 Executable files are either native compiled files (binary files), or
 text files that are scripts to be executed by an interpreter.  In the

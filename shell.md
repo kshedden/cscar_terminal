@@ -55,9 +55,21 @@ Pipes
 -----
 
 Pipes are used to treat the output of one command as the input to
-another.  For now we will give one simple example, and we will see
+another.  For now we will give two simple examples, and we will see
 more complex examples when we discuss using OS tools:
+
+List the directory contents and view the results in the viewer
+[less](https://www.gnu.org/software/less):
 
 ```
 ls -laht | less
 ```
+
+List the directory contents, but only display the first 10 lines:
+
+```
+ls -laht | head -n10
+```
+
+Note that stricty speaking, these are "anonymous pipes".  "Named
+pipes" (or FIFOs) are different, and are not discussed here.
