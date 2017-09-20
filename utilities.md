@@ -85,7 +85,7 @@ using the comma character as a delimiter:
 > head -n50 file.csv
 ```
 
-Other usefule utilities for working with text files are `join` and `comm`.
+Other useful utilities for working with text files are `join` and `comm`.
 
 Compressing and archiving files
 -------------------------------
