@@ -6,20 +6,29 @@ Two major UNIX principles:
 * "Everything is a file" -- a file can be a program, data, a device
   (e.g. printer or thumb drive); "data" files can have any format and
   the file name does not need to convey the format; there is no
-  metadata conveying how to interpret file contents; there are no
-  locks (in general)
+  metadata conveying how to interpret file contents; locks are
+  advisory and are not often encountered by users
 
 * The filesystem hides its implementation and hardware configuration;
   what we see as the filesystem on one machine may be physically
   stored on multiple local disks or other storage devices, or on other
   computers accessible via the network
 
+* There are many filesystem implementations for UNIX, and several
+  filesystems may be accessible from a given computer.  For example,
+  /tmp is almost certainly located on the local drive of the machine
+  you are connected to, while /afs/umich.edu/user/... is a file
+  managed by the AFS networked filesystem.
+
 
 Basic filesystem commands
 -------------------------
 
-The general format of most UNIX commands is: `[command name]
-[arguments] [flags]`.
+The general format of most UNIX commands is: `[command name] [options
+and parameters]`.  "Options" (or "flags") usually begin with a hyphen,
+and modify the behavior of the command.  Parameters are arguments that
+either apply directly to the command, or to the immediately preceeding
+option.
 
 You can usually obtain documentation for command `cmd` using `cmd
 --help` or `man cmd`.
@@ -148,8 +157,9 @@ Lots of details not covered here.
 
 `chmod u+x` makes a file executable
 
-If using AFS, it has its own system of file permissions that exists
-along-side the UNIX permission system.
+If using a networked files system such as AFS, there may be an
+independent system of file permissions that exist alongside the UNIX
+permission system.
 
 Executable files
 ----------------

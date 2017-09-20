@@ -2,8 +2,10 @@ UNIX utilities
 ==============
 
 A large number of utility programs are installed on most UNIX systems.
-Many of them are installed in the directory `/usr/bin`.  We will
-discuss just a few of them here.  A longer list of tools with
+Most of these are developed and maintain as part of the [GNU core
+utilities](https://www.gnu.org/software/coreutils/coreutils.html).
+Many of these utilities are installed in the directory `/usr/bin`.  We
+will discuss just a few of them here.  A longer list of tools with
 documentation is
 [here](http://www.tldp.org/LDP/GNU-Linux-Tools-Summary/html/book1.htm).
 
@@ -58,7 +60,7 @@ Working with text files
  given pattern, e.g.
 
 ```
-> grep word files	| wc -l
+> grep word files | wc -l
 ```
 
 *sort* takes the lines of all input files together and sorts them.  A
@@ -82,6 +84,8 @@ using the comma character as a delimiter:
 ```
 > head -n50 file.csv
 ```
+
+Other usefule utilities for working with text files are `join` and `comm`.
 
 Compressing and archiving files
 -------------------------------

@@ -9,7 +9,7 @@ the most common.
 
 You can determine what shell you are using by typing `echo $SHELL`.
 If you want to try another shell just type the name of it into your
-current shell, e.g. `csh`, `tcsh`, `dash`, or `sh`.  To exit out of a
+current shell, e.g. `csh`, `tcsh`, `bash`, or `sh`.  To exit out of a
 shell, you can use the `exit` command or (in some cases) type
 `ctrl-d`.
 
@@ -40,7 +40,7 @@ The `>` operator sends the output of a command to a file (rather than
 to the terminal), for example:
 
 ```
-lst -lat  > files
+ls -lat  > files
 cat *.txt > everything.txt
 ```
 

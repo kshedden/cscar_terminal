@@ -20,11 +20,12 @@ to standardize some aspects of the OS.
 and the [Linux kernel](https://en.wikipedia.org/wiki/Linux).
 Combining Linux with the tools produced by the [GNU
 project](https://en.wikipedia.org/wiki/GNU_Project) results in a
-usable UNIX-like system.  Apple adopts a UNIX-like foundation for
+usable UNIX-like system.  Apple adopts a UNIX foundation for
 [MacOS](https://en.wikipedia.org/wiki/MacOS).
 
-By 2010 UNIX variants became the main OS running the cloud (web
-applications, commercial database systems, social media, etc.)
+By 2010 UNIX variants became the main OS running the cloud (search,
+web applications) as well as commercial information systems
+(databases, etc.).
 
 What's in store for late 2010's and beyond?  [Virtual
 machines](https://en.wikipedia.org/wiki/Operating-system-level_virtualization),
@@ -55,11 +56,20 @@ Terms related to terminals/text interfaces:
 
 * "Text terminal" / "Character oriented terminal"
 
-* [Command line interface](https://en.wikipedia.org/wiki/Command-line_interface)
+* [Command line
+  interface](https://en.wikipedia.org/wiki/Command-line_interface) --
+  a style of user interface that is line-oriented and text-based,
+  usually with only basic mouse support (for copy/paste).
 
-* [Text user interface](https://en.wikipedia.org/wiki/Text-based_user_interface)
+* [Text user
+  interface](https://en.wikipedia.org/wiki/Text-based_user_interface)
+  -- a text-based interface that incorporates some features of
+  graphical user interfaces such as menus and buttons, and may support
+  a broader range of mouse-driven actions.
 
-* [Shell](https://en.wikipedia.org/wiki/Shell_(computing))
+* [Shell](https://en.wikipedia.org/wiki/Shell_(computing)) -- a
+  program for giving a user access to operating system services,
+  traditionally text-based.
 
 Terms related to computer networks:
 
@@ -71,7 +81,9 @@ Key UNIX principles
 
 [UNIX philosophy](https://en.wikipedia.org/wiki/Unix_philosophy)
 
-* Everything is a file (but hide the filesytem implementation)
+* Everything is a file
+
+* Hide filesytem implementation details (no named drives)
 
 * C is the central implementation language
 
@@ -81,10 +93,10 @@ Key UNIX principles
 
 * Text streams are the universal interface between tools
 
-* "the power of a system comes more from the relationships among
+* "...the power of a system comes more from the relationships among
   programs than from the programs themselves" (Rob Pike)
 
-* The "style [of using UNIX is] based on the use of tools: using
+* "(The) style [of using UNIX is] based on the use of tools: using
   programs separately or in combination to get a job done, rather than
   doing it by hand, by monolithic self-sufficient subsystems, or by
   special-purpose, one-time programs" (Kernighan, Ritchie)
